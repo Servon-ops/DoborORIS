@@ -1,0 +1,50 @@
+﻿@using System.Globalization;
+@using WEBORIS.CONSTANTS;
+@using WEBORIS.Models;
+@model List<ProductModel>
+@{
+    ViewData["Title"] = "Shop Page";
+}
+
+<div class="shop">
+    <div class="shop-main">
+        <div class="shop-main-info">
+            <h1>Shop</h1>
+            <p>This is where you can browse products in this store.</p>
+        </div>
+    </div>
+    <div class="shop-main-container">
+        <div class="shop-main-container-info">
+            Showing @Model.Count results
+        </div>
+        <div class="shop-main-container-products-con">
+            <div class="shop-main-container-products">
+                @foreach (var e in Model)
+                {
+                <div class="shop-main-container-product">
+                    <div class="shop-img-container">
+                        <img src="@e.Image" />
+                            @if (e.NewCost != null)
+                            {
+                                <span class="sale">
+                                    Sale!
+                                </span>
+                            }
+                    </div>
+                    <a class="hover-to-red no-style" href="/Shop/@e.Sku">@e.Name</a>
+                        @if (e.NewCost != null)
+                        {
+                            <p class="shop-cost-product"><s>$@e.Cost.Value.ToString("0.00")</s> <b>$@e.NewCost.Value.ToString("0.00")</b></p>
+                        }
+                        else
+                        {
+                            <p class="shop-cost-product">$@e.Cost.Value.ToString("0.00")</p>
+                    }
+
+                </div>
+                }
+            </div>
+            <div class="shop-main-container-filters"></div>
+        </div>
+    </div>
+</div>

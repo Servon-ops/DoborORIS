@@ -1,0 +1,56 @@
+﻿@using WEBORIS.ViewModels
+
+@model ProductReviewViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="shop">
+    <div class="shop-main">
+        <div class="shop-main-info">
+            <h1>Shop</h1>
+        </div>
+    </div>
+    <div class="shop-main-container flex">
+        <div class="product-image-container flex">
+            <img src="@Model.Image"/>
+        </div>
+        <div class="product-info flex">
+            <h1 class="product-name">@Model.Name</h1>
+            @if (Model.NewCost != null)
+            {
+                <p class="product-cost"><s>$@Model.Cost.Value.ToString("0.00")</s> <b>$@Model.NewCost.Value.ToString("0.00")</b></p>
+            }
+            else
+            {
+                <p class="product-cost">$@Model.Cost.Value.ToString("0.00")</p>
+            }
+            <p class="product-sku">SKU: @Model.Sku</p>
+            <hr>
+            <p class="product-shortdescription">@Model.ShortDescription</p>
+            <hr>
+            <div class="product-count-container">
+                <input type="number" class="product-count" min="1" value="1"/>
+                <button class="product-add-button">Add to cart</button>
+            </div>
+            <p class="product-category">Category: <a href="/Shop/Category/@Model.Category">@Model.Category</a></p>
+
+        </div>
+    </div>
+    <div class="product-description-container">
+        <div class="product-btn-container">
+            <button class="button-description pink-color">Description</button>
+            <button class="button-reviews">Reviews(@Model.ReviewModel.Count)</button>
+        </div>
+        <p class="product-description">@Model.Description</p>
+        @foreach (var e in Model.ReviewModel) {
+        <div class="product-review display-none">
+            <h2 style="color: white;">@e.Author:</h2>
+            <p>@e.Description</p>
+        </div>
+        }
+    </div>
+</div>

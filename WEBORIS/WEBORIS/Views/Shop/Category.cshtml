@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<ProductModel>
+@{
+    if (Model.Count == 0)
+    {
+        ViewData["Title"] = "Category Page";
+    }
+    else
+    {
+        ViewData["Title"] = Model[0].Category;
+    }
+}
+<div class="shop">
+    <div class="shop-main">
+        <div class="shop-main-info">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+    </div>
+    <div class="shop-main-container">
+        <div class="shop-main-container-info">
+            Showing @Model.Count results
+        </div>
+        <div class="shop-main-container-products-con">
+            <div class="shop-main-container-products">
+                @foreach (var e in Model)
+                {
+                    <div class="shop-main-container-product">
+                        <div class="shop-img-container">
+                            <img src="@e.Image" />
+                            @if (e.NewCost != null)
+                            {
+                                <span class="sale">
+                                    Sale!
+                                </span>
+                            }
+                        </div>
+                        <a class="hover-to-red no-style" href="/Shop/@e.Sku">@e.Name</a>
+                        @if (e.NewCost != null)
+                        {
+                            <p class="shop-cost-product"><s>$@e.Cost.Value.ToString("0.00")</s> <b>$@e.NewCost.Value.ToString("0.00")</b></p>
+                        }
+                        else
+                        {
+                            <p class="shop-cost-product">$@e.Cost.Value.ToString("0.00")</p>
+                        }
+
+                    </div>
+                }
+            </div>
+            <div class="shop-main-container-filters"></div>
+        </div>
+    </div>
+</div>

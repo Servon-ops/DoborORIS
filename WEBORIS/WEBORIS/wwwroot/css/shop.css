@@ -1,0 +1,246 @@
+﻿.shop-main {
+    padding-top: 174px;
+    background-color: #1A1A1A;
+}
+
+.shop-main-info h1 {
+    font-size: 36px;
+    font-family: Poppins, sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.shop-main-info p {
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    color: #C1C6C9;
+}
+
+.shop-main-info {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 60px;
+}
+
+.shop-main-container {
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #C1C6C9;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-main-container {
+    background-color: #121213;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.shop {
+    background-color: #121213;  
+}
+
+.shop-main-container-info {
+   color: #C1C6C9;
+   font-family: Roboto, sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   padding-bottom: 60px;
+}
+
+shop-main-container-products-con {
+    display: flex;
+}
+
+.shop-main-container-products {
+    display: flex;
+    width: 66.7%;
+    flex-wrap: wrap;
+}
+
+.shop-main-container-product {
+    display: flex;
+    width: 33.3%;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.shop-img-container {
+    overflow: hidden;
+    height: 250px;
+    width: 90%;
+    position: relative;
+}
+
+    .shop-img-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .shop-img-container img:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+.shop-main-container-product a {
+    margin-top: 20px;
+}
+
+.sale {
+    position: absolute;
+    background-color: #FF2C54;
+    z-index: 5;
+    top: 5%;
+    left: 5%;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    border-radius: 50%;
+    font-weight: 600;
+    padding: 15px 5px 15px 5px;
+}
+
+.shop-cost-product {
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    color: #FFFFFF;
+}
+
+.no-style {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.product-image-container {
+
+}
+
+.flex {
+    display: flex;
+}
+
+.product-info {
+    margin-left: 50px;
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
+}
+.product-name {
+    font-size: 24px;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+}
+
+.product-cost {
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    color: #FF2C54;
+}
+
+.product-sku {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+
+}
+
+.product-shortdescription {
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+}
+
+.product-category {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+.product-count {
+    height: 40px;
+    width: 60px;
+    font-size: 25px;
+    border: none;
+    padding: 0;
+}
+
+.product-add-button {
+    height: 40px;
+    width: 160px;
+    margin-left: 15px;
+    background-color: #FF2C54;
+    border: none;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.product-count-container {
+    display: flex;
+}
+
+.product-category a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.product-category a:hover {
+    color: #FF2C54;
+}
+
+.product-description-container {
+    width: 85%;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: #C1C6C9;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+    min-height: 200px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.product-description-container p {
+    padding: 40px;  
+}
+
+.product-btn-container {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    top: -1px;
+    left: -1px;
+}
+
+    .product-btn-container button {
+        height: 44px;
+        width: 142px;
+        background-color: #FFFFFF;
+        font-size: 16px;
+        font-family: Poppins, sans-serif;
+        color: black;
+        font-weight: 600;
+    }
+
+.pink-color {
+    color: #FF2C54 !important;
+}
+
+.product-description {
+            
+}
+
+.display-none {
+    display: none !important;
+}
+
+.product-review {
+    display: flex;
+    align-items: center;
+}
